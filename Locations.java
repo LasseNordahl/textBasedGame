@@ -49,9 +49,11 @@ public class Locations extends NamedThing {
 		locations[2][1].addCommand("move left");
 		locations[0][2] = new Room("Room 0051 ", "A room lit by a single incandescent light bulb, below it stands \n"
 				+ "a computer terminal, some text stands above the blinking computer cursor", true, 4);
+		locations[0][2].createPuzzle(4);
 		locations[0][2].addCommand("move left");
 		locations[1][2] = new Room("Room 0052 ", "A room lit by flourescent light, barren of detail,"
 				+ "\nonly lights are present in the back of the room.", true, 5);
+		locations[1][2].createPuzzle(5);
 		locations[1][2].addCommand("move left");
 		locations[2][2] = new Room("Room 0053 ",
 				"A room lit by only the hallway light is in front of you \n" + "with text etched on the wall", true, 6);
