@@ -22,7 +22,7 @@ public class Room extends Place{
 		} else if (puzzleType == 2){
 			puzzle = new Puzzle2();
 		} else if (puzzleType == 3){
-			//puzzle = new Puzzle3();
+			puzzle = new Puzzle3();
 		} else if (puzzleType == 4){
 			//puzzle = new Puzzle4();
 		} else if (puzzleType == 5){

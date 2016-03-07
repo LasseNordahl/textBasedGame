@@ -29,6 +29,10 @@ public class PlayGame {
 		 
 		 */
 		System.out.println("Rooms");
+		System.out.println();
+		System.out.println("You wake up lying on the ground in a hallway. The room smells of antiseptic and oil. You don't"
+				+ "\nremember anything, except that you don't belong here. To the right of you lies a map. You pick"
+				+ "\nit up and realize you need to escape this place. (Type \"help\" for possible moves)");
 
 		boolean end = false;
 		String action = "";
@@ -47,22 +51,23 @@ public class PlayGame {
 	public static void readAction(String a) {
 		if (a.length() > 3 && a.substring(0, 4).equalsIgnoreCase("move")) {
 			Action.move(world, a, player1);
-		} else if (a.equalsIgnoreCase("check room")){
-			System.out.println(world.getPlace());
 		} else if (a.equalsIgnoreCase("help")){
 			Action.help(world, a);
 		} else if (a.equalsIgnoreCase("open door")){
-			player1.addKey();
 			Action.openDoor(world, player1, a);
 		} else if (a.equalsIgnoreCase("look at map") ||
 				a.equalsIgnoreCase("use map") ||
 				a.equalsIgnoreCase("show map") ||
 				a.equalsIgnoreCase("check map")){
 			Action.useMap(world, player1);
-		} else if (a.equalsIgnoreCase("look around")){
+		} else if (a.equalsIgnoreCase("look around") ||
+				a.equalsIgnoreCase("check room")){
 			Action.lookAround(world);
 		} else if(a.equalsIgnoreCase("inspect wall")){
 			Action.inspectWall(world);
+		} else if (a.equalsIgnoreCase("quit game")){
+			System.out.println("Thanks for playing!");
+			System.exit(0);
 		} else {
 			System.out.println("You can't do that.");
 		}

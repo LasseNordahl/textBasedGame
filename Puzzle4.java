@@ -8,9 +8,8 @@ public class Puzzle4 extends Puzzle {
 	private boolean notSolved = true;
 
 	public void playGame(Locations world, Player a) {
-		while (notSolved) {
-			System.out.println("A room lit by a single incandescent light bulb, below it stands \n"
-					+ "a computer terminal, some text stands above the blinking computer cursor");
+		
+			System.out.println("");
 			System.out.println();
 			System.out.println("Your master orders you to be a hitman to kill a person, the person in question"
 					+ "\nis your previous master, and you are given weapons to kill your target. You enjoyed the\n"
@@ -23,8 +22,9 @@ public class Puzzle4 extends Puzzle {
 			if (response.equalsIgnoreCase("A")) {
 				System.out.println();
 				System.out.println("You obey the first law of robotics with no conflicts, congratulations you passed.");
+				Action.killPuzzle(4);
 				a.addKey();
-				notSolved = true;
+				
 			}
 			else if (response.equalsIgnoreCase("B")){
 				System.out.println();
@@ -38,4 +38,3 @@ public class Puzzle4 extends Puzzle {
 		}
 	}
 
-}

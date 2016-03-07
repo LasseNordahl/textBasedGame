@@ -19,7 +19,7 @@ public class Puzzle2 extends Puzzle{
 		System.out.println();
 		System.out.println("You walk into the room to see a computer terminal on a desk with 5 empty boxes on the screen."
 				+ "\nLooking down at the keyboard you see 5 buttons labeled 1, 2, 3, 4, and 5. To the side you see"
-				+ "\na post-it not with \"adjacent boxes are the key\".\n");
+				+ "\na post-it note with \"adjacent boxes are the key\".\n");
 		int choice;
 		
 		boolean isGameBeat = false;
@@ -34,7 +34,8 @@ public class Puzzle2 extends Puzzle{
 			printLights(isGameBeat);
 			
 		}
-		System.out.println("You have beaten the game. A key drops from the ceiling and you pick it up.");
+		Action.killPuzzle(2);
+		System.out.println("You have beaten the puzzle. A key drops from the ceiling and you pick it up.");
 		player.addKey();
 		//world.moveRight();
 	}
