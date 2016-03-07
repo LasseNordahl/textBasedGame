@@ -1,15 +1,8 @@
 package textBasedGame;
 import java.util.Scanner;
 
-public class Puzzle {
+public abstract class Puzzle {
 	Scanner scan = new Scanner(System.in);
 
-	public void playGame(Locations world) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	
-
+	public abstract void playGame(Locations world, Player player);
 }
-

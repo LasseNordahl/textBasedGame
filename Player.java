@@ -22,7 +22,13 @@ public class Player extends Entity{
 	
 	public void addKey() {
 		items.add(new Item("key", "description"));
+	
 		keyCount++;
+		if (getKeyCount() == 1){
+			System.out.println("You now have " + getKeyCount() + " key");
+		} else {
+		System.out.println("You now have " + getKeyCount() + " keys");
+		}
 		
 	}
 	

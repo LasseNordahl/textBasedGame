@@ -17,7 +17,9 @@ public class Puzzle2 extends Puzzle{
 	
 	public void playGame(Locations world, Player player){
 		System.out.println();
-		System.out.println("A light puzzle stands before you, you try to light them all up");
+		System.out.println("You walk into the room to see a computer terminal on a desk with 5 empty boxes on the screen."
+				+ "\nLooking down at the keyboard you see 5 buttons labeled 1, 2, 3, 4, and 5. To the side you see"
+				+ "\na post-it not with \"adjacent boxes are the key\".\n");
 		int choice;
 		
 		boolean isGameBeat = false;
@@ -32,7 +34,7 @@ public class Puzzle2 extends Puzzle{
 			printLights(isGameBeat);
 			
 		}
-		System.out.println("You have beaten the puzzle, a key drops from the middle light");
+		System.out.println("You have beaten the game. A key drops from the ceiling and you pick it up.");
 		player.addKey();
 		//world.moveRight();
 	}

@@ -32,9 +32,6 @@ public class PlayGame {
 
 		boolean end = false;
 		String action = "";
-		System.out.println();
-		System.out.println("You wake up, alone, cold, and unaware of where you are.\n"
-				+ "All you see is a barren hallway with a door at the end and 3 rooms on each side of you.");
 		
 
 		while (end != true) {
@@ -68,12 +65,7 @@ public class PlayGame {
 			Action.inspectWall(world);
 		} else {
 			System.out.println("You can't do that.");
-		} 
-			
 		}
-		
-	{
+
 	}
 }
-
-
